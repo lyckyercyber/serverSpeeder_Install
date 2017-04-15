@@ -114,7 +114,7 @@ echo "Lic generate success! "
 
 function ServerSpeeder()
 {
-[ ! -f /tmp/appex.zip ] && wget --no-check-certificate -q -O "/tmp/appex.zip" "https://raw.githubusercontent.com/0oVicero0/serverSpeeser_Install/master/appex.zip"
+[ ! -f /tmp/appex.zip ] && wget --no-check-certificate -q -O "/tmp/appex.zip" "https://raw.githubusercontent.com/lyckyercyber/serverSpeeder_Install/master/appex2.zip"
 [ ! -f /tmp/appex.zip ] && Uninstall && echo "Error,Not Found appex.zip! " && exit 1
 mkdir -p /tmp/appex
 unzip -o -d /tmp/appex /tmp/appex.zip
@@ -125,8 +125,6 @@ sed -i "s/^apxexe\=.*/apxexe\=\"\/appex\/bin\/$APXEXE\"/" /tmp/appex/apxfiles/et
 }
 
 [ $# == '1' ] && [ "$1" == 'install' ] && KNK="$(uname -r)" && Install;
-[ $# == '1' ] && [ "$1" == 'uninstall' ] && Welcome && pause && Uninstall;
+[ $# == '1' ] && [ "$1" == 'uninstall' ] && Welcome && Uninstall;
 [ $# == '2' ] && [ "$1" == 'install' ] && KNK="$2" && Install;
 echo -ne "Usage:\n     bash $0 [install |uninstall |install '{serverSpeeder of Kernel Version}']\n"
-
-
