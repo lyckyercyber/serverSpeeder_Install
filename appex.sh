@@ -123,6 +123,7 @@ sed -i "s/^accif\=.*/accif\=\"$Eth\"/" /tmp/appex/apxfiles/etc/config
 sed -i "s/^apxexe\=.*/apxexe\=\"\/appex\/bin\/$APXEXE\"/" /tmp/appex/apxfiles/etc/config
 }
 
+
 [ $# == '1' ] && [ "$1" == 'install' ] && KNK="$(uname -r)" && Install;
 [ $# == '1' ] && [ "$1" == 'uninstall' ] && Welcome && Uninstall;
 [ $# == '2' ] && [ "$1" == 'install' ] && KNK="$2" && Install;
